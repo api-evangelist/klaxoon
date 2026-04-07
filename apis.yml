@@ -9,10 +9,10 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Collaboration
-  - Productivity
   - Meetings
-  - Workshops
+  - Productivity
   - Team Collaboration
+  - Workshops
 url: https://raw.githubusercontent.com/api-evangelist/klaxoon/refs/heads/main/apis.yml
 created: '2024-01-01'
 modified: '2026-03-16'
@@ -27,9 +27,9 @@ apis:
     humanURL: https://developers.klaxoon.com
     baseURL: https://api.klaxoon.com
     tags:
-      - Collaboration
-      - Boards
       - Activities
+      - Boards
+      - Collaboration
     properties:
       - type: Documentation
         url: https://developers.klaxoon.com/docs
