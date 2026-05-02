@@ -1,53 +1,62 @@
 # Klaxoon (klaxoon)
-Klaxoon is a collaborative platform that provides tools for team collaboration, brainstorming, meetings, and workshops. The platform includes features like boards, quizzes, surveys, and other interactive activities to enhance team productivity and engagement.
 
-**URL:** [Visit APIs.json URL](https://developers.klaxoon.com/apis.json)
+Klaxoon is a collaborative platform that provides tools for team collaboration, brainstorming, meetings, and workshops. The platform includes features like boards, quizzes, surveys, and other interactive activities to enhance team productivity and engagement. Klaxoon publishes a developer portal with documentation for board integration, embedding, and enterprise audit and SCIM endpoints, but does not currently publish a public OpenAPI specification.
 
-## Tags:
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/klaxoon/refs/heads/main/apis.yml)
 
- - collaboration, productivity, meetings, workshops, team collaboration
+## Tags
+
+- Collaboration
+- Meetings
+- Productivity
+- Team Collaboration
+- Workshops
+- Brainstorming
+- Whiteboard
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Klaxoon API
-The Klaxoon API allows developers to integrate Klaxoon's collaborative features into their applications, enabling automation of board creation, activity management, and participant engagement.
 
-**Human URL:** [https://developers.klaxoon.com](https://developers.klaxoon.com)
+The Klaxoon API allows developers to integrate Klaxoon's collaborative features into their applications, enabling automation of board creation, activity management, and participant engagement. It includes the Board API, Activity Picker, Klaxoon Embed, Audit Logs API, SCIM API, and Participant Activity Report API.
 
+**Human URL:** https://developers.klaxoon.com
 
-#### Tags:
+#### Tags
 
- - collaboration, boards, activities, webhooks
+- Activities, Boards, Collaboration, Embed, SCIM, Audit
 
 #### Properties
 
 - [Documentation](https://developers.klaxoon.com/docs)
-- [OpenAPI](https://developers.klaxoon.com/openapi.json)
 - [Authentication](https://developers.klaxoon.com/docs/authentication)
 - [Getting Started](https://developers.klaxoon.com/docs/getting-started)
-- [Webhooks](https://developers.klaxoon.com/docs/webhooks)
-- [Rate Limits](https://developers.klaxoon.com/docs/rate-limits)
-- [SDKs](https://developers.klaxoon.com/sdks)
-- [Use Cases](https://developers.klaxoon.com/use-cases)
+- [Reference](https://developers.klaxoon.com/klaxoon/reference)
 - [Changelog](https://developers.klaxoon.com/changelog)
 
 ## Common Properties
 
+- [Website](https://www.klaxoon.com)
+- [Portal](https://developers.klaxoon.com)
+- [Documentation](https://developers.klaxoon.com/docs)
+- [Authentication](https://developers.klaxoon.com/docs/authentication)
+- [Reference](https://developers.klaxoon.com/klaxoon/reference)
+- [Blog](https://www.klaxoon.com/blog)
+- [Sign Up](https://app.klaxoon.com/signup)
+- [Pricing](https://www.klaxoon.com/pricing)
 - [Terms of Service](https://www.klaxoon.com/terms)
 - [Privacy Policy](https://www.klaxoon.com/privacy)
 - [Status](https://status.klaxoon.com)
-- [Blog](https://www.klaxoon.com/blog)
+- [Support](https://support.klaxoon.com)
 - [LinkedIn](https://www.linkedin.com/company/klaxoon)
-- [Sign Up](https://app.klaxoon.com/signup)
-- [Pricing](https://www.klaxoon.com/pricing)
 
 ## Maintainers
 
-**FN:** Klaxoon
+**FN:** Kin Lane
 
-**Email:** api@klaxoon.com
+**Email:** kin@apievangelist.com
