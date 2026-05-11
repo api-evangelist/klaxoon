@@ -75,6 +75,37 @@ common:
     url: https://support.klaxoon.com
   - type: LinkedIn
     url: https://www.linkedin.com/company/klaxoon
+  - type: Integrations
+    url: https://klaxoon.com/integrations/
+integrations:
+  - name: Klaxoon logo.
+  - name: Microsoft logo.
+  - name: Google Workspace logo.
+  - name: Jira logo.
+  - name: Wrike logo.
+  - name: MS Office<br>
+  - name: Microsoft Teams<br>
+  - name: MS OneDrive
+  - name: Microsoft SSO<br>
+  - name: Entra ID<br>
+  - name: MS Intune<br>
+  - name: Google Drive
+  - name: Google Calendar
+  - name: Google SSO
+  - name: Google Docs
+  - name: Jira
+  - name: Adobe CC<br>
+  - name: OKTA
+  - name: Zapier
+  - name: Apple SSO
+  - name: Confluence
+  - name: Dropbox
+  - name: Moodle<br>
+  - name: YouTube logo.
+  - name: Dailymotion logo.
+  - name: Vimeo logo.
+  - name: Spotify logo.
+  - name: Deezer logo.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
