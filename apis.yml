@@ -42,11 +42,11 @@ apis:
         url: https://developers.klaxoon.com/docs
       - type: Authentication
         url: https://developers.klaxoon.com/docs/authentication
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.klaxoon.com/docs/getting-started
       - type: Reference
         url: https://developers.klaxoon.com/klaxoon/reference
-      - type: Changelog
+      - type: ChangeLog
         url: https://developers.klaxoon.com/changelog
 common:
   - type: Website
@@ -61,15 +61,15 @@ common:
     url: https://developers.klaxoon.com/klaxoon/reference
   - type: Blog
     url: https://www.klaxoon.com/blog
-  - type: Sign Up
+  - type: SignUp
     url: https://app.klaxoon.com/signup
   - type: Pricing
     url: https://www.klaxoon.com/pricing
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.klaxoon.com/terms
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.klaxoon.com/privacy
-  - type: Status
+  - type: StatusPage
     url: https://status.klaxoon.com
   - type: Support
     url: https://support.klaxoon.com
