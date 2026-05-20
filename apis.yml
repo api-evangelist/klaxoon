@@ -49,6 +49,8 @@ apis:
       - type: ChangeLog
         url: https://developers.klaxoon.com/changelog
 common:
+  - type: GitHubOrganization
+    url: https://github.com/klaxoon
   - type: Website
     url: https://www.klaxoon.com
   - type: Portal
