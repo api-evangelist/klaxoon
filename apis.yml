@@ -79,6 +79,8 @@ common:
     url: https://www.linkedin.com/company/klaxoon
   - type: Integrations
     url: https://klaxoon.com/integrations/
+  - type: LLMsTxt
+    url: https://developers.klaxoon.com/llms.txt
 integrations:
   - name: Klaxoon logo.
   - name: Microsoft logo.
