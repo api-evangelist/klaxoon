@@ -1,0 +1,280 @@
+openapi: 3.1.0
+info:
+  title: Klaxoon API
+  description: >-
+    Klaxoon is a collaborative platform for meetings, workshops, and
+    brainstorming. The Klaxoon API exposes activity-centric resources
+    including quizzes, surveys, missions, and adventures, plus participant
+    results. Authentication uses OAuth 2.0 against the Klaxoon authorization
+    server.
+  version: v1
+  contact:
+    name: Klaxoon Developer Support
+    url: https://developers.klaxoon.com
+servers:
+  - url: https://developers.klaxoon.com/klaxoon/api/v1
+    description: Klaxoon API v1 production server
+security:
+  - OAuth2: []
+tags:
+  - name: Quizzes
+    description: Quiz activity resources and participant results
+  - name: Surveys
+    description: Survey activity resources and participant results
+  - name: Missions
+    description: Mission activity resources
+  - name: Adventures
+    description: Adventure activity resources
+paths:
+  /quizzes:
+    get:
+      operationId: listQuizzes
+      summary: List Quizzes
+      description: Return the list of quizzes accessible to the authenticated user.
+      tags:
+        - Quizzes
+      responses:
+        '200':
+          description: Successful response with quiz list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuizListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /quizzes/{activityId}:
+    get:
+      operationId: getQuiz
+      summary: Get Quiz
+      description: Return a single quiz by activity identifier.
+      tags:
+        - Quizzes
+      parameters:
+        - name: activityId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Quiz activity identifier
+      responses:
+        '200':
+          description: Successful response with quiz detail
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quiz'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /quizzes/{activityId}/participants:
+    get:
+      operationId: listQuizParticipants
+      summary: List Quiz Participants Results
+      description: Return participant results for a given quiz activity.
+      tags:
+        - Quizzes
+      parameters:
+        - name: activityId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Quiz activity identifier
+      responses:
+        '200':
+          description: Successful response with participant results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ParticipantResultListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /surveys/{activityId}/participants/me:
+    get:
+      operationId: getMySurveyResults
+      summary: Get My Survey Results
+      description: Return the survey results for the currently authenticated user.
+      tags:
+        - Surveys
+      parameters:
+        - name: activityId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Survey activity identifier
+      responses:
+        '200':
+          description: Successful response with the user's survey results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ParticipantResult'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /missions/{activityId}:
+    get:
+      operationId: getMission
+      summary: Get Mission
+      description: Return a single mission by activity identifier.
+      tags:
+        - Missions
+      parameters:
+        - name: activityId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Mission activity identifier
+      responses:
+        '200':
+          description: Successful response with mission detail
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mission'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /adventures/{accessCode}:
+    get:
+      operationId: getAdventureByAccessCode
+      summary: Get Adventure by Access Code
+      description: Return an adventure activity by its public access code.
+      tags:
+        - Adventures
+      parameters:
+        - name: accessCode
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Public access code for the adventure
+      responses:
+        '200':
+          description: Successful response with adventure detail
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adventure'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: >-
+        OAuth 2.0 authorization-code flow against Klaxoon. Scopes are issued
+        per integration via the Klaxoon developer portal.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://access.klaxoon.com/auth
+          tokenUrl: https://access.klaxoon.com/token
+          scopes: {}
+  responses:
+    Unauthorized:
+      description: Missing or invalid OAuth credentials
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+    Activity:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        accessCode:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    Quiz:
+      allOf:
+        - $ref: '#/components/schemas/Activity'
+        - type: object
+          properties:
+            questionCount:
+              type: integer
+            language:
+              type: string
+    QuizListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Quiz'
+    Survey:
+      allOf:
+        - $ref: '#/components/schemas/Activity'
+        - type: object
+          properties:
+            anonymous:
+              type: boolean
+    Mission:
+      allOf:
+        - $ref: '#/components/schemas/Activity'
+        - type: object
+          properties:
+            description:
+              type: string
+    Adventure:
+      allOf:
+        - $ref: '#/components/schemas/Activity'
+        - type: object
+          properties:
+            stages:
+              type: integer
+    ParticipantResult:
+      type: object
+      properties:
+        participantId:
+          type: string
+        displayName:
+          type: string
+        score:
+          type: number
+          nullable: true
+        answers:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        submittedAt:
+          type: string
+          format: date-time
+          nullable: true
+    ParticipantResultListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParticipantResult'
