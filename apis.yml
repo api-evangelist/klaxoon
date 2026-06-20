@@ -8,7 +8,7 @@ description: >-
   and engagement. Klaxoon publishes a developer portal with documentation for board
   integration, embedding, and enterprise audit and SCIM endpoints, but does not currently
   publish a public OpenAPI specification.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 type: Index
 tags:
   - Collaboration
