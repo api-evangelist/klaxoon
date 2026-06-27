@@ -63,7 +63,7 @@ common:
     url: https://developers.klaxoon.com/klaxoon/reference
   - type: Blog
     url: https://www.klaxoon.com/blog
-  - type: SignUp
+  - type: Signup
     url: https://app.klaxoon.com/signup
   - type: Pricing
     url: https://www.klaxoon.com/pricing
@@ -79,7 +79,7 @@ common:
     url: https://www.linkedin.com/company/klaxoon
   - type: Integrations
     url: https://klaxoon.com/integrations/
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developers.klaxoon.com/llms.txt
 integrations:
   - name: Klaxoon logo.
