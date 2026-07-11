@@ -49,6 +49,8 @@ apis:
       - type: ChangeLog
         url: https://developers.klaxoon.com/changelog
 common:
+  - type: OAuthScopes
+    url: scopes/klaxoon-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/klaxoon
   - type: Website

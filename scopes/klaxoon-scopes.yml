@@ -1,0 +1,63 @@
+generated: '2026-07-11'
+method: searched
+source: openapi/klaxoon-openapi.yml
+docs: https://developers.klaxoon.com/klaxoon/docs/scopes
+schemes:
+- name: OAuth2
+  source: openapi/klaxoon-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://access.klaxoon.com/auth
+    tokenUrl: https://access.klaxoon.com/token
+  description: OAuth 2.0 authorization-code flow against Klaxoon. Scopes are issued per integration
+    via the Klaxoon developer portal.
+scopes:
+- scope: identity:read
+  description: View profile informations of the authenticated user (email, first
+    name, last name).
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: auditlog:read
+  description: 'Read Audit Logs for an organization. Note: the authenticated user
+    authorizing your application must have a Company Admin role within the organization
+    for full access to the Company Audit Logs.'
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: board:read
+  description: Read Boards and Board content of a Klaxoon user.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: board:write
+  description: Create and modify Boards and Board content of a Klaxoon user.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: quiz:read
+  description: Get the list of Quizzes of a Klaxoon user and informations on Quiz
+    participants and results.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: survey:read
+  description: Get the list of Surveys of a Klaxoon user and informations on Survey
+    participants and results.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: memo:read
+  description: Get the list of Memos of a Klaxoon user and informations on Memo participants
+    and results.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: adventure:read
+  description: Get the list of Adventures of a Klaxoon user and informations on Adventure
+    participants and results.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: mission:read
+  description: Get the list of Missions of a Klaxoon user and informations on Mission
+    participants and results.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
+- scope: session:read
+  description: Get the list of Sessions of a Klaxoon user and informations on Session
+    participants and results.
+  sources:
+  - https://developers.klaxoon.com/klaxoon/docs/scopes
