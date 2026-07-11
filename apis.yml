@@ -49,6 +49,10 @@ apis:
       - type: ChangeLog
         url: https://developers.klaxoon.com/changelog
 common:
+  - type: DomainSecurity
+    url: security/klaxoon-domain-security.yml
+  - type: Authentication
+    url: authentication/klaxoon-authentication.yml
   - type: OAuthScopes
     url: scopes/klaxoon-scopes.yml
   - type: GitHubOrganization
