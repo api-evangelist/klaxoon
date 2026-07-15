@@ -49,6 +49,8 @@ apis:
       - type: ChangeLog
         url: https://developers.klaxoon.com/changelog
 common:
+  - type: AgenticAccess
+    url: agentic-access/klaxoon-agentic-access.yml
   - type: DomainSecurity
     url: security/klaxoon-domain-security.yml
   - type: Authentication
