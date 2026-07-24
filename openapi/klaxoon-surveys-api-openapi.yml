@@ -1,0 +1,92 @@
+openapi: 3.1.0
+info:
+  title: Klaxoon Adventures Surveys API
+  description: Klaxoon is a collaborative platform for meetings, workshops, and brainstorming. The Klaxoon API exposes activity-centric resources including quizzes, surveys, missions, and adventures, plus participant results. Authentication uses OAuth 2.0 against the Klaxoon authorization server.
+  version: v1
+  contact:
+    name: Klaxoon Developer Support
+    url: https://developers.klaxoon.com
+servers:
+- url: https://developers.klaxoon.com/klaxoon/api/v1
+  description: Klaxoon API v1 production server
+security:
+- OAuth2: []
+tags:
+- name: Surveys
+  description: Survey activity resources and participant results
+paths:
+  /surveys/{activityId}/participants/me:
+    get:
+      operationId: getMySurveyResults
+      summary: Get My Survey Results
+      description: Return the survey results for the currently authenticated user.
+      tags:
+      - Surveys
+      parameters:
+      - name: activityId
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Survey activity identifier
+      responses:
+        '200':
+          description: Successful response with the user's survey results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ParticipantResult'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+components:
+  schemas:
+    ParticipantResult:
+      type: object
+      properties:
+        participantId:
+          type: string
+        displayName:
+          type: string
+        score:
+          type: number
+          nullable: true
+        answers:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        submittedAt:
+          type: string
+          format: date-time
+          nullable: true
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid OAuth credentials
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 authorization-code flow against Klaxoon. Scopes are issued per integration via the Klaxoon developer portal.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://access.klaxoon.com/auth
+          tokenUrl: https://access.klaxoon.com/token
+          scopes: {}

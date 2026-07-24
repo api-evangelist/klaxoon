@@ -1,0 +1,95 @@
+openapi: 3.1.0
+info:
+  title: Klaxoon Adventures Missions API
+  description: Klaxoon is a collaborative platform for meetings, workshops, and brainstorming. The Klaxoon API exposes activity-centric resources including quizzes, surveys, missions, and adventures, plus participant results. Authentication uses OAuth 2.0 against the Klaxoon authorization server.
+  version: v1
+  contact:
+    name: Klaxoon Developer Support
+    url: https://developers.klaxoon.com
+servers:
+- url: https://developers.klaxoon.com/klaxoon/api/v1
+  description: Klaxoon API v1 production server
+security:
+- OAuth2: []
+tags:
+- name: Missions
+  description: Mission activity resources
+paths:
+  /missions/{activityId}:
+    get:
+      operationId: getMission
+      summary: Get Mission
+      description: Return a single mission by activity identifier.
+      tags:
+      - Missions
+      parameters:
+      - name: activityId
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Mission activity identifier
+      responses:
+        '200':
+          description: Successful response with mission detail
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mission'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+components:
+  responses:
+    Unauthorized:
+      description: Missing or invalid OAuth credentials
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    Mission:
+      allOf:
+      - $ref: '#/components/schemas/Activity'
+      - type: object
+        properties:
+          description:
+            type: string
+    Activity:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        accessCode:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 authorization-code flow against Klaxoon. Scopes are issued per integration via the Klaxoon developer portal.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://access.klaxoon.com/auth
+          tokenUrl: https://access.klaxoon.com/token
+          scopes: {}
