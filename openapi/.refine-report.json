@@ -1,0 +1,20 @@
+{
+  "provider": "klaxoon",
+  "sources": [
+    "klaxoon-adventures-api-openapi.yml",
+    "klaxoon-missions-api-openapi.yml",
+    "klaxoon-quizzes-api-openapi.yml",
+    "klaxoon-surveys-api-openapi.yml"
+  ],
+  "outputs": [
+    "klaxoon-adventures-api-openapi.yml",
+    "klaxoon-missions-api-openapi.yml",
+    "klaxoon-quizzes-api-openapi.yml",
+    "klaxoon-surveys-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
