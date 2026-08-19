@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Klaxoon Adventures Surveys API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://access.klaxoon.com/auth",
+      "accessTokenUrl": "https://access.klaxoon.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Surveys",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get My Survey Results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.klaxoon.com/klaxoon/api/v1/surveys/:activityId/participants/me",
+            "params": [
+              {
+                "name": "activityId",
+                "value": "",
+                "type": "path",
+                "description": "Survey activity identifier"
+              }
+            ]
+          },
+          "docs": "Return the survey results for the currently authenticated user."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

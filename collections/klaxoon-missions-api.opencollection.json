@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Klaxoon Adventures Missions API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://access.klaxoon.com/auth",
+      "accessTokenUrl": "https://access.klaxoon.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Missions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Mission",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.klaxoon.com/klaxoon/api/v1/missions/:activityId",
+            "params": [
+              {
+                "name": "activityId",
+                "value": "",
+                "type": "path",
+                "description": "Mission activity identifier"
+              }
+            ]
+          },
+          "docs": "Return a single mission by activity identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

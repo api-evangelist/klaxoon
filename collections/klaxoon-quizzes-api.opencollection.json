@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Klaxoon Adventures Quizzes API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://access.klaxoon.com/auth",
+      "accessTokenUrl": "https://access.klaxoon.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Quizzes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Quizzes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.klaxoon.com/klaxoon/api/v1/quizzes"
+          },
+          "docs": "Return the list of quizzes accessible to the authenticated user."
+        },
+        {
+          "info": {
+            "name": "Get Quiz",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.klaxoon.com/klaxoon/api/v1/quizzes/:activityId",
+            "params": [
+              {
+                "name": "activityId",
+                "value": "",
+                "type": "path",
+                "description": "Quiz activity identifier"
+              }
+            ]
+          },
+          "docs": "Return a single quiz by activity identifier."
+        },
+        {
+          "info": {
+            "name": "List Quiz Participants Results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developers.klaxoon.com/klaxoon/api/v1/quizzes/:activityId/participants",
+            "params": [
+              {
+                "name": "activityId",
+                "value": "",
+                "type": "path",
+                "description": "Quiz activity identifier"
+              }
+            ]
+          },
+          "docs": "Return participant results for a given quiz activity."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

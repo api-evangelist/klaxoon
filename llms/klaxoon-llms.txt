@@ -1,0 +1,65 @@
+# Klaxoon Developers Documentation
+
+> Documentation for Klaxoon Developers
+
+## Guides
+- [Introduction to Klaxoon Developer Platform](https://developers.klaxoon.com/klaxoon/docs/dev-portal-introduction.md): Start building with the Klaxoon API
+- [Authorization Protocol](https://developers.klaxoon.com/klaxoon/docs/authorization.md): How to implement the OAuth2
+- [Scopes](https://developers.klaxoon.com/klaxoon/docs/scopes.md)
+- [Klaxoon API Terms of Use](https://developers.klaxoon.com/klaxoon/docs/klaxoon-api-terms-of-use.md): Last Updated: January 8th 2024
+- [Introduction to Klaxoon Board API](https://developers.klaxoon.com/klaxoon/docs/introduction.md): Exchange data with Klaxoon Board
+- [Calling the Board APIs](https://developers.klaxoon.com/klaxoon/docs/how-to-use-the-board-apis.md): How to use the Board APIs
+- [Introduction to Klaxoon MCP](https://developers.klaxoon.com/klaxoon/docs/introduction-to-klaxoon-mcp.md): Learn what Klaxoon MCP is, what you can do with it, and how permissions work when connecting an AI assistant to your Klaxoon whiteboards.
+- [Installation guide](https://developers.klaxoon.com/klaxoon/docs/installation-guide.md): Connect your AI tool to the Klaxoon MCP server using marketplace installation, OAuth auto-discovery, or your own OAuth application.
+- [Use-cases & example prompts](https://developers.klaxoon.com/klaxoon/docs/use-cases-prompts.md): Prompt patterns for turning whiteboards into structured tasks, workshop layouts, diagrams, summaries, and organized boards.
+- [Available tools](https://developers.klaxoon.com/klaxoon/docs/available-tools-1.md): Reference the Klaxoon MCP tools for server instructions, whiteboards, board items, and sticky color palettes.
+- [Activity Picker](https://developers.klaxoon.com/klaxoon/docs/activity-picker.md): How to use the Activity Picker
+- [Introduction to Klaxoon Embed](https://developers.klaxoon.com/klaxoon/docs/embed-introduction.md): Embed a Klaxoon Activity into your application
+- [Embedded Activity Link](https://developers.klaxoon.com/klaxoon/docs/embed-link.md): How to embed a Klaxoon Activity
+- [Log Object](https://developers.klaxoon.com/klaxoon/docs/log-object.md): Description of the Log Object
+- [Introduction to Klaxoon SCIM](https://developers.klaxoon.com/klaxoon/docs/introduction-to-klaxoon-scim.md)
+- [Klaxoon SCIM rules](https://developers.klaxoon.com/klaxoon/docs/klaxoon-scim-rules.md)
+- [Introduction to Participant Activity Report API](https://developers.klaxoon.com/klaxoon/docs/activity-report-introduction.md): Collect participation, scores and progression details of Klaxoon activities
+- [How to use the Participant Activity Report APIs](https://developers.klaxoon.com/klaxoon/docs/how-to-use-the-activity-report-apis.md)
+
+## API Reference
+- [Get one user](https://developers.klaxoon.com/klaxoon/reference/get_users-userid.md): Get one user
+- [Get paginated list of users](https://developers.klaxoon.com/klaxoon/reference/get_users.md): Get paginated list of users
+- [List quizzes](https://developers.klaxoon.com/klaxoon/reference/get_v1-quizzes.md)
+- [Get quiz](https://developers.klaxoon.com/klaxoon/reference/get_v1-quizzes-activityid.md)
+- [Get quiz by access code](https://developers.klaxoon.com/klaxoon/reference/get_v1-quizzes-by-access-code-accesscode.md)
+- [List quiz participants results](https://developers.klaxoon.com/klaxoon/reference/get_v1-quizzes-activityid-participants.md)
+- [Get quiz results for current user](https://developers.klaxoon.com/klaxoon/reference/get_v1-quizzes-activityid-participants-me.md)
+- [Get quiz results for a participant](https://developers.klaxoon.com/klaxoon/reference/get_v1-quizzes-activityid-participants-participantid.md)
+- [List surveys](https://developers.klaxoon.com/klaxoon/reference/get_v1-surveys.md)
+- [Get survey](https://developers.klaxoon.com/klaxoon/reference/get_v1-surveys-activityid.md)
+- [Get survey by access code](https://developers.klaxoon.com/klaxoon/reference/get_v1-surveys-by-access-code-accesscode.md)
+- [List survey participants results](https://developers.klaxoon.com/klaxoon/reference/get_v1-surveys-activityid-participants.md)
+- [Get survey results for current user](https://developers.klaxoon.com/klaxoon/reference/get_v1-surveys-activityid-participants-me.md)
+- [Get survey results for a participant](https://developers.klaxoon.com/klaxoon/reference/get_v1-surveys-activityid-participants-participantid.md)
+- [List memos](https://developers.klaxoon.com/klaxoon/reference/get_v1-memos.md)
+- [Get memo](https://developers.klaxoon.com/klaxoon/reference/get_v1-memos-activityid.md)
+- [Get memo by access code](https://developers.klaxoon.com/klaxoon/reference/get_v1-memos-by-access-code-accesscode.md)
+- [List memo participants results](https://developers.klaxoon.com/klaxoon/reference/get_v1-memos-activityid-participants.md)
+- [Get memo results for current user](https://developers.klaxoon.com/klaxoon/reference/get_v1-memos-activityid-participants-me.md)
+- [Get memo results for a participant](https://developers.klaxoon.com/klaxoon/reference/get_v1-memos-activityid-participants-participantid.md)
+- [List adventures](https://developers.klaxoon.com/klaxoon/reference/get_v1-adventures.md)
+- [Get adventure](https://developers.klaxoon.com/klaxoon/reference/get_v1-adventures-activityid.md)
+- [Get adventure by access code](https://developers.klaxoon.com/klaxoon/reference/get_v1-adventures-by-access-code-accesscode.md)
+- [List adventure participants results](https://developers.klaxoon.com/klaxoon/reference/get_v1-adventures-activityid-participants.md)
+- [Get adventure results for current user](https://developers.klaxoon.com/klaxoon/reference/get_v1-adventures-activityid-participants-me.md)
+- [Get adventure results for a participant](https://developers.klaxoon.com/klaxoon/reference/get_v1-adventures-activityid-participants-participantid.md)
+- [List missions](https://developers.klaxoon.com/klaxoon/reference/get_v1-missions.md)
+- [Get mission](https://developers.klaxoon.com/klaxoon/reference/get_v1-missions-activityid.md)
+- [Get mission by access code](https://developers.klaxoon.com/klaxoon/reference/get_v1-missions-by-access-code-accesscode.md)
+- [List mission participants results](https://developers.klaxoon.com/klaxoon/reference/get_v1-missions-activityid-participants.md)
+- [Get mission results for current user](https://developers.klaxoon.com/klaxoon/reference/get_v1-missions-activityid-participants-me.md)
+- [Get mission results for a participant](https://developers.klaxoon.com/klaxoon/reference/get_v1-missions-activityid-participants-participantid.md)
+- [List sessions](https://developers.klaxoon.com/klaxoon/reference/get_v1-sessions.md)
+- [Get session](https://developers.klaxoon.com/klaxoon/reference/get_v1-sessions-activityid.md)
+- [Get session by access code](https://developers.klaxoon.com/klaxoon/reference/get_v1-sessions-by-access-code-accesscode.md)
+- [List session participants results](https://developers.klaxoon.com/klaxoon/reference/get_v1-sessions-activityid-participants.md)
+- [Get session results for current user](https://developers.klaxoon.com/klaxoon/reference/get_v1-sessions-activityid-participants-me.md)
+- [Get session results for a participant](https://developers.klaxoon.com/klaxoon/reference/get_v1-sessions-activityid-participants-participantid.md)
+- [Get one SCIM integration status](https://developers.klaxoon.com/klaxoon/reference/get_scim-scimid.md): Get one SCIM integration status
+

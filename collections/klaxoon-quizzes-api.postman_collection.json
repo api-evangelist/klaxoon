@@ -1,0 +1,574 @@
+{
+  "item": [
+    {
+      "id": "10a7b012-7c1c-4c5e-97a9-89aa86b16e42",
+      "name": "Quizzes",
+      "description": {
+        "content": "Quiz activity resources and participant results",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "76cd9311-9eaa-44d7-bac5-401e3e85108e",
+          "name": "List Quizzes",
+          "request": {
+            "name": "List Quizzes",
+            "description": {
+              "content": "Return the list of quizzes accessible to the authenticated user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quizzes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7f6ba8bd-32d5-4e97-9ced-55e94b4139b3",
+              "name": "Successful response with quiz list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"accessCode\": \"string\",\n      \"createdAt\": \"1972-12-06T20:47:33.750Z\",\n      \"updatedAt\": \"1952-09-30T04:28:45.600Z\",\n      \"questionCount\": 9486,\n      \"language\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"accessCode\": \"string\",\n      \"createdAt\": \"2006-02-05T02:10:58.009Z\",\n      \"updatedAt\": \"1959-10-22T02:00:49.227Z\",\n      \"questionCount\": 2959,\n      \"language\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fcf40c84-0603-4ac8-ae0e-b2a8e7e30807",
+              "name": "Missing or invalid OAuth credentials",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2fb7ba30-f51a-434d-833e-b043e45622ec",
+          "name": "Get Quiz",
+          "request": {
+            "name": "Get Quiz",
+            "description": {
+              "content": "Return a single quiz by activity identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quizzes",
+                ":activityId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "activityId",
+                  "description": "(Required) Quiz activity identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "727c78b3-418d-4f7e-bb2d-975d97ab39be",
+              "name": "Successful response with quiz detail",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes",
+                    ":activityId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Quiz activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"title\": \"string\",\n  \"accessCode\": \"string\",\n  \"createdAt\": \"2002-12-16T01:26:38.543Z\",\n  \"updatedAt\": \"2011-07-24T19:19:36.942Z\",\n  \"questionCount\": 2517,\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "45eee094-56d4-40ac-b766-834628c587c4",
+              "name": "Missing or invalid OAuth credentials",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes",
+                    ":activityId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Quiz activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0de39ce4-0e17-435e-b6e5-bfc2735cfa41",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes",
+                    ":activityId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Quiz activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c6f2ac84-0950-4a3d-a881-089368e638e2",
+          "name": "List Quiz Participants Results",
+          "request": {
+            "name": "List Quiz Participants Results",
+            "description": {
+              "content": "Return participant results for a given quiz activity.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quizzes",
+                ":activityId",
+                "participants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "activityId",
+                  "description": "(Required) Quiz activity identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0c41ac91-97a6-43c7-a12c-e2c40dd0f3ff",
+              "name": "Successful response with participant results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes",
+                    ":activityId",
+                    "participants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Quiz activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"participantId\": \"string\",\n      \"displayName\": \"string\",\n      \"score\": 3860.022184347397,\n      \"answers\": [\n        {\n          \"key_0\": \"string\"\n        },\n        {\n          \"key_0\": true,\n          \"key_1\": 9974,\n          \"key_2\": 7981,\n          \"key_3\": 7948.465000678591\n        }\n      ],\n      \"submittedAt\": \"1949-01-12T11:48:31.724Z\"\n    },\n    {\n      \"participantId\": \"string\",\n      \"displayName\": \"string\",\n      \"score\": 359.7312478814385,\n      \"answers\": [\n        {\n          \"key_0\": true\n        },\n        {\n          \"key_0\": 2245.709741298145,\n          \"key_1\": true,\n          \"key_2\": 3276.3361049597906,\n          \"key_3\": false\n        }\n      ],\n      \"submittedAt\": \"2006-09-29T10:13:19.990Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ba43c4e3-9b0f-4c83-bf15-12f3687918d7",
+              "name": "Missing or invalid OAuth credentials",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes",
+                    ":activityId",
+                    "participants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Quiz activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7546052c-9351-4c8e-bc12-2f85782c1f49",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quizzes",
+                    ":activityId",
+                    "participants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Quiz activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developers.klaxoon.com/klaxoon/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://access.klaxoon.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://access.klaxoon.com/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "541dc935-db62-4e1c-bb5c-f3b07448b720",
+    "name": "Klaxoon Adventures Quizzes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Klaxoon is a collaborative platform for meetings, workshops, and brainstorming. The Klaxoon API exposes activity-centric resources including quizzes, surveys, missions, and adventures, plus participant results. Authentication uses OAuth 2.0 against the Klaxoon authorization server.\n\nContact Support:\n Name: Klaxoon Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

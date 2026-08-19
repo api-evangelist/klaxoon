@@ -1,0 +1,249 @@
+{
+  "item": [
+    {
+      "id": "8a114db3-bd4e-422b-888a-12a67a9914bc",
+      "name": "Adventures",
+      "description": {
+        "content": "Adventure activity resources",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b80ffa89-803d-4230-bcf5-b28c8c4aafa8",
+          "name": "Get Adventure by Access Code",
+          "request": {
+            "name": "Get Adventure by Access Code",
+            "description": {
+              "content": "Return an adventure activity by its public access code.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adventures",
+                ":accessCode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accessCode",
+                  "description": "(Required) Public access code for the adventure"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "512e9db9-0e04-4c58-ba2b-28157a4af9dc",
+              "name": "Successful response with adventure detail",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adventures",
+                    ":accessCode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accessCode",
+                      "description": "(Required) Public access code for the adventure"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"title\": \"string\",\n  \"accessCode\": \"string\",\n  \"createdAt\": \"2017-08-07T01:36:13.610Z\",\n  \"updatedAt\": \"1969-05-30T12:00:01.473Z\",\n  \"stages\": 9327\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4485b48a-e9cf-4240-ac5f-d575b3ccefd2",
+              "name": "Missing or invalid OAuth credentials",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adventures",
+                    ":accessCode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accessCode",
+                      "description": "(Required) Public access code for the adventure"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1ad216d2-097d-4536-a3df-2b2b185d5906",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adventures",
+                    ":accessCode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accessCode",
+                      "description": "(Required) Public access code for the adventure"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developers.klaxoon.com/klaxoon/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://access.klaxoon.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://access.klaxoon.com/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "316aef73-e009-43a1-bee1-6d7818794f40",
+    "name": "Klaxoon Adventures API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Klaxoon is a collaborative platform for meetings, workshops, and brainstorming. The Klaxoon API exposes activity-centric resources including quizzes, surveys, missions, and adventures, plus participant results. Authentication uses OAuth 2.0 against the Klaxoon authorization server.\n\nContact Support:\n Name: Klaxoon Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

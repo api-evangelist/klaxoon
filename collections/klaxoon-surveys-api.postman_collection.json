@@ -1,0 +1,257 @@
+{
+  "item": [
+    {
+      "id": "a955e28b-a00b-446f-a61c-e29beec18f07",
+      "name": "Surveys",
+      "description": {
+        "content": "Survey activity resources and participant results",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "180715c3-cb8b-4fa4-bcb8-a7ac15553a7d",
+          "name": "Get My Survey Results",
+          "request": {
+            "name": "Get My Survey Results",
+            "description": {
+              "content": "Return the survey results for the currently authenticated user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "surveys",
+                ":activityId",
+                "participants",
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "activityId",
+                  "description": "(Required) Survey activity identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c100bb72-1918-4779-999b-eca14a4fb6d9",
+              "name": "Successful response with the user's survey results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys",
+                    ":activityId",
+                    "participants",
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Survey activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"participantId\": \"string\",\n  \"displayName\": \"string\",\n  \"score\": 4450.506277074236,\n  \"answers\": [\n    {\n      \"key_0\": 5727,\n      \"key_1\": 1829\n    },\n    {\n      \"key_0\": 4262.460356227294,\n      \"key_1\": \"string\"\n    }\n  ],\n  \"submittedAt\": \"1997-10-02T14:57:33.130Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8237c30e-7663-49d1-bc49-f328075cec88",
+              "name": "Missing or invalid OAuth credentials",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys",
+                    ":activityId",
+                    "participants",
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Survey activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dfea850c-9350-406d-b41c-6c16190d5383",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys",
+                    ":activityId",
+                    "participants",
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "activityId",
+                      "description": "(Required) Survey activity identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developers.klaxoon.com/klaxoon/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://access.klaxoon.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://access.klaxoon.com/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "548165c1-f913-4288-a0e0-d5c36d93ed9f",
+    "name": "Klaxoon Adventures Surveys API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Klaxoon is a collaborative platform for meetings, workshops, and brainstorming. The Klaxoon API exposes activity-centric resources including quizzes, surveys, missions, and adventures, plus participant results. Authentication uses OAuth 2.0 against the Klaxoon authorization server.\n\nContact Support:\n Name: Klaxoon Developer Support",
+      "type": "text/plain"
+    }
+  }
+}
