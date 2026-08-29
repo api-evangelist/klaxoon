@@ -8,6 +8,18 @@ description: >-
   and engagement. Klaxoon publishes a developer portal with documentation for board
   integration, embedding, and enterprise audit and SCIM endpoints, but does not currently
   publish a public OpenAPI specification.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
