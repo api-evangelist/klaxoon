@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Klaxoon Adventures Surveys API
+  title: Klaxoon Surveys API
   description: Klaxoon is a collaborative platform for meetings, workshops, and brainstorming. The Klaxoon API exposes activity-centric resources including quizzes, surveys, missions, and adventures, plus participant results. Authentication uses OAuth 2.0 against the Klaxoon authorization server.
   version: v1
   contact:
@@ -42,6 +42,13 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
     ParticipantResult:
       type: object
       properties:
@@ -61,22 +68,15 @@ components:
           type: string
           format: date-time
           nullable: true
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: string
-        message:
-          type: string
   responses:
-    Unauthorized:
-      description: Missing or invalid OAuth credentials
+    NotFound:
+      description: Resource not found
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
-    NotFound:
-      description: Resource not found
+    Unauthorized:
+      description: Missing or invalid OAuth credentials
       content:
         application/json:
           schema:
