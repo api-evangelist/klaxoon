@@ -96,22 +96,6 @@ components:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
   schemas:
-    QuizListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/Quiz'
-    Quiz:
-      allOf:
-      - $ref: '#/components/schemas/Activity'
-      - type: object
-        properties:
-          questionCount:
-            type: integer
-          language:
-            type: string
     ErrorResponse:
       type: object
       properties:
@@ -119,6 +103,20 @@ components:
           type: string
         message:
           type: string
+    QuizListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Quiz'
+    ParticipantResultListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParticipantResult'
     ParticipantResult:
       type: object
       properties:
@@ -153,13 +151,15 @@ components:
         updatedAt:
           type: string
           format: date-time
-    ParticipantResultListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/ParticipantResult'
+    Quiz:
+      allOf:
+      - $ref: '#/components/schemas/Activity'
+      - type: object
+        properties:
+          questionCount:
+            type: integer
+          language:
+            type: string
   securitySchemes:
     OAuth2:
       type: oauth2
