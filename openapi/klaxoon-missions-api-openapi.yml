@@ -42,14 +42,14 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   responses:
-    NotFound:
-      description: Resource not found
+    Unauthorized:
+      description: Missing or invalid OAuth credentials
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
-    Unauthorized:
-      description: Missing or invalid OAuth credentials
+    NotFound:
+      description: Resource not found
       content:
         application/json:
           schema:
@@ -62,13 +62,6 @@ components:
           type: string
         message:
           type: string
-    Mission:
-      allOf:
-      - $ref: '#/components/schemas/Activity'
-      - type: object
-        properties:
-          description:
-            type: string
     Activity:
       type: object
       properties:
@@ -84,6 +77,13 @@ components:
         updatedAt:
           type: string
           format: date-time
+    Mission:
+      allOf:
+      - $ref: '#/components/schemas/Activity'
+      - type: object
+        properties:
+          description:
+            type: string
   securitySchemes:
     OAuth2:
       type: oauth2

@@ -82,27 +82,7 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 components:
-  responses:
-    NotFound:
-      description: Resource not found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorResponse'
-    Unauthorized:
-      description: Missing or invalid OAuth credentials
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorResponse'
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: string
-        message:
-          type: string
     QuizListResponse:
       type: object
       properties:
@@ -110,6 +90,22 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Quiz'
+    Quiz:
+      allOf:
+      - $ref: '#/components/schemas/Activity'
+      - type: object
+        properties:
+          questionCount:
+            type: integer
+          language:
+            type: string
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
     ParticipantResultListResponse:
       type: object
       properties:
@@ -117,6 +113,21 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ParticipantResult'
+    Activity:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        accessCode:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
     ParticipantResult:
       type: object
       properties:
@@ -136,30 +147,19 @@ components:
           type: string
           format: date-time
           nullable: true
-    Activity:
-      type: object
-      properties:
-        id:
-          type: string
-        title:
-          type: string
-        accessCode:
-          type: string
-        createdAt:
-          type: string
-          format: date-time
-        updatedAt:
-          type: string
-          format: date-time
-    Quiz:
-      allOf:
-      - $ref: '#/components/schemas/Activity'
-      - type: object
-        properties:
-          questionCount:
-            type: integer
-          language:
-            type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid OAuth credentials
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
   securitySchemes:
     OAuth2:
       type: oauth2
