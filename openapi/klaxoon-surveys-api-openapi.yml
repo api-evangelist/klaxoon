@@ -42,13 +42,6 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: string
-        message:
-          type: string
     ParticipantResult:
       type: object
       properties:
@@ -68,6 +61,13 @@ components:
           type: string
           format: date-time
           nullable: true
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
   responses:
     NotFound:
       description: Resource not found

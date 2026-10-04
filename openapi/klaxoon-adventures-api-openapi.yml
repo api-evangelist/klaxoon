@@ -41,21 +41,20 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 components:
+  responses:
+    Unauthorized:
+      description: Missing or invalid OAuth credentials
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
   schemas:
-    Adventure:
-      allOf:
-      - $ref: '#/components/schemas/Activity'
-      - type: object
-        properties:
-          stages:
-            type: integer
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: string
-        message:
-          type: string
     Activity:
       type: object
       properties:
@@ -71,19 +70,20 @@ components:
         updatedAt:
           type: string
           format: date-time
-  responses:
-    Unauthorized:
-      description: Missing or invalid OAuth credentials
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorResponse'
-    NotFound:
-      description: Resource not found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorResponse'
+    Adventure:
+      allOf:
+      - $ref: '#/components/schemas/Activity'
+      - type: object
+        properties:
+          stages:
+            type: integer
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
   securitySchemes:
     OAuth2:
       type: oauth2
