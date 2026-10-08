@@ -113,6 +113,12 @@ apis:
   - type: OpenAPI
     url: openapi/klaxoon-surveys-api-openapi.yml
 common:
+  - type: Plans
+    url: plans/klaxoon-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/klaxoon-rate-limits.yml
+  - type: FinOps
+    url: finops/klaxoon-finops.yml
   - type: AgenticAccess
     url: agentic-access/klaxoon-agentic-access.yml
   - type: DomainSecurity
