@@ -10,6 +10,7 @@ checked:
 - https://zapier.com/api/v4/apps/
 - microsoft-teams/integrations/microsoft-teams-integration-edges.yml
 - zoom/integrations/zoom-integration-edges.yml
+- atlassian/integrations/atlassian-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -27,59 +28,6 @@ edges:
   seller_name: Klaxoon by Wrike
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
-- partner_name: Google Workspace (own)
-  partner: google-workspace
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://workspace.google.com/marketplace/app/klaxoon_by_wrike/88757907571
-  mirror_of: google-workspace/integrations/google-workspace-integration-edges.yml
-  apps:
-  - Klaxoon by Wrike
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Google Workspace app
-- partner_name: Microsoft Teams (own)
-  partner: microsoft-teams
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://appsource.microsoft.com/en-us/product/office/WA104382058
-  mirror_of: microsoft-teams/integrations/microsoft-teams-integration-edges.yml
-  apps:
-  - Klaxoon by Wrike
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Microsoft Teams app
-  publisher_verified:
-  - Microsoft 365 Certified
-- partner_name: Zoom (own)
-  partner: zoom
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.zoom.us/apps/9rwE6o1HQ1-dMeK97ylZHg
-  mirror_of: zoom/integrations/zoom-integration-edges.yml
-  apps:
-  - Klaxoon
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Zoom app
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
@@ -161,6 +109,76 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
+- partner_name: Google Workspace (own)
+  partner: google-workspace
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://workspace.google.com/marketplace/app/klaxoon_by_wrike/88757907571
+  mirror_of: google-workspace/integrations/google-workspace-integration-edges.yml
+  apps:
+  - Klaxoon by Wrike
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Google Workspace app
+- partner_name: Microsoft Teams (own)
+  partner: microsoft-teams
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://appsource.microsoft.com/en-us/product/office/WA104382058
+  mirror_of: microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+  apps:
+  - Klaxoon by Wrike
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Microsoft Teams app
+  publisher_verified:
+  - Microsoft 365 Certified
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/9rwE6o1HQ1-dMeK97ylZHg
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Klaxoon
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
+- partner_name: Atlassian (own)
+  partner: atlassian
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.atlassian.com/vendors/1222645/klaxoon-by-wrike
+  mirror_of: atlassian/integrations/atlassian-integration-edges.yml
+  apps:
+  - Klaxoon by Wrike
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: Charts & diagramming
 source:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
 - https://zapier.com/api/v4/apps/
