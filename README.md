@@ -1,4 +1,4 @@
-# Klaxoon (klaxoon)
+# Klaxoon
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,74 +66,142 @@
 
 Klaxoon is a collaborative platform that provides tools for team collaboration, brainstorming, meetings, and workshops. The platform includes features like boards, quizzes, surveys, and other interactive activities to enhance team productivity and engagement. Klaxoon publishes a developer portal with documentation for board integration, embedding, and enterprise audit and SCIM endpoints, but does not currently publish a public OpenAPI specification.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/klaxoon/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/klaxoon/refs/heads/main/apis.yml)
+**Areas:** Collaboration · Meetings · Productivity · Team Collaboration · Workshops · Brainstorming · Whiteboard
 
-## Scope
+## Klaxoon on APIs.io
 
-- **Type:** Index
+Everything profiled for Klaxoon is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/klaxoon/](https://apis.io/providers/klaxoon/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Collaboration
-- Meetings
-- Productivity
-- Team Collaboration
-- Workshops
-- Brainstorming
-- Whiteboard
+- [Klaxoon API](https://apis.io/apis/klaxoon/klaxoon-api/) — The Klaxoon API allows developers to integrate Klaxoon's collaborative features into their applications, enabling automation of board creation, activity…
+- [Klaxoon Adventures API](https://apis.io/apis/klaxoon/klaxoon-adventures-api/) — Adventure activity resources
+- [Klaxoon Missions API](https://apis.io/apis/klaxoon/klaxoon-missions-api/) — Mission activity resources
+- [Klaxoon Quizzes API](https://apis.io/apis/klaxoon/klaxoon-quizzes-api/) — Quiz activity resources and participant results
+- [Klaxoon Surveys API](https://apis.io/apis/klaxoon/klaxoon-surveys-api/) — Survey activity resources and participant results
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Klaxoon API
+Model Context Protocol servers that expose the API to agents.
 
-The Klaxoon API allows developers to integrate Klaxoon's collaborative features into their applications, enabling automation of board creation, activity management, and participant engagement. It includes the Board API, Activity Picker, Klaxoon Embed, Audit Logs API, SCIM API, and Participant Activity Report API.
+- [Moved to /providers/klaxoon/](https://apis.io/servers/klaxoon/klaxoon/)
 
-- **Human URL:** [https://developers.klaxoon.com](https://developers.klaxoon.com)
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Activities
-- Boards
-- Collaboration
-- Embed
-- SCIM
-- Audit
+- [Klaxoon Agentic Access](https://apis.io/agentic-access/klaxoon/klaxoon-agentic-access/)
 
-#### Properties
+#### Collections (5)
 
-- [Documentation](https://developers.klaxoon.com/docs)
-- [Authentication](https://developers.klaxoon.com/docs/authentication)
-- [Getting Started](https://developers.klaxoon.com/docs/getting-started)
-- [Reference](https://developers.klaxoon.com/klaxoon/reference)
-- [Changelog](https://developers.klaxoon.com/changelog)
-- [Postman Collection](collections/klaxoon.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/klaxoon.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [Klaxoon API](https://apis.io/collections/klaxoon/open-klaxoon/)
+- [Klaxoon Adventures API](https://apis.io/collections/klaxoon/open-klaxoon-adventures-api/)
+- [Klaxoon Adventures Missions API](https://apis.io/collections/klaxoon/open-klaxoon-missions-api/)
+- [Klaxoon Adventures Quizzes API](https://apis.io/collections/klaxoon/open-klaxoon-quizzes-api/)
+- [Klaxoon Adventures Surveys API](https://apis.io/collections/klaxoon/open-klaxoon-surveys-api/)
 
-- [GitHub Organization](https://github.com/klaxoon)
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Klaxoon Authentication](https://apis.io/security/klaxoon/klaxoon-authentication/)
+- [Klaxoon Domain Security](https://apis.io/security/klaxoon/klaxoon-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Klaxoon Scopes](https://apis.io/scopes/klaxoon/klaxoon-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Klaxoon Plans Pricing](https://apis.io/plans/klaxoon/klaxoon-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Klaxoon Rate Limits](https://apis.io/rate-limits/klaxoon/klaxoon-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Klaxoon Finops](https://apis.io/finops/klaxoon/klaxoon-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.klaxoon.com)
-- [Portal](https://developers.klaxoon.com)
 - [Documentation](https://developers.klaxoon.com/docs)
-- [Authentication](https://developers.klaxoon.com/docs/authentication)
-- [Reference](https://developers.klaxoon.com/klaxoon/reference)
-- [Blog](https://www.klaxoon.com/blog)
-- [Sign Up](https://app.klaxoon.com/signup)
 - [Pricing](https://www.klaxoon.com/pricing)
-- [Terms of Service](https://www.klaxoon.com/terms)
-- [Privacy Policy](https://www.klaxoon.com/privacy)
-- [Status Page](https://status.klaxoon.com)
 - [Support](https://support.klaxoon.com)
-- [LinkedIn](https://www.linkedin.com/company/klaxoon)
-- [Integrations](https://klaxoon.com/integrations/)
-- [L L Ms Txt](https://developers.klaxoon.com/llms.txt)
+- [Blog](https://www.klaxoon.com/blog)
+- [Terms of service](https://www.klaxoon.com/terms)
+- [Privacy policy](https://www.klaxoon.com/privacy)
+- [GitHub](https://github.com/klaxoon)
+- [Status](https://status.klaxoon.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 37.4** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 49.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 31.6 |
+
+**Agent readiness 36.6** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | verified |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/klaxoon/](https://apis.io/providers/klaxoon/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Klaxoon: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/klaxoon/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
